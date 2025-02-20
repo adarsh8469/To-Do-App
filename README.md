@@ -25,4 +25,6 @@
 - create a types.js file in backend for the verification using zod library
 - Inside the type.js writing the validation logic via zod
 - Inside the index.js we are reesponding the user wheather the inputs are corretely field or not in the post and put methods.
-- 
+
+- Step : 3
+    - Run npm install mongoose (Now setting up the Database)
