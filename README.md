@@ -28,3 +28,5 @@
 
 - Step : 3
     - Run npm install mongoose (Now setting up the Database)
+    - In the index.js (post) we will be writing logic to add in the database
+    - In the (get) of index.js we will be getting all the data by using find which returns promise 

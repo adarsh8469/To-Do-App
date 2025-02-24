@@ -21,6 +21,7 @@ app.post("/todo", async function(req, res){
         })
         return;
     }
+    //Put the data in mongoDB database
     try{
         await todo.create({
             title : createPayload.title,
@@ -36,8 +37,8 @@ app.post("/todo", async function(req, res){
     })
 });
 
-app.get("/todos", function(req, res){
-
+app.get("/todos", async function(req, res){
+    const todos = await todo.find();
 });
 
 app.put("/completed", function(req, res){
