@@ -7,11 +7,12 @@
 //  }
 const express = require("express");
 const { createTodo, updateTodo } = require("./types");
+const { todo } = require("./db");
 const app = express();
 
 app.use(express.json());
 
-app.post("/todo", function(req, res){
+app.post("/todo", async function(req, res){
     const createPayload = req.body;
     const parsedPayload = createTodo.safeParse(createPayload);
     if(!parsedPayload.success){
@@ -20,10 +21,19 @@ app.post("/todo", function(req, res){
         })
         return;
     }
-    else{
-        //Insert in the mongoDB
-
+    try{
+        await todo.create({
+            title : createPayload.title,
+            description : createPayload.description
+        })
     }
+    catch(e){
+        alert("Database is Down")
+    }
+
+    res.json({
+        msg : "Todo Created"
+    })
 });
 
 app.get("/todos", function(req, res){
