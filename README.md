@@ -30,3 +30,18 @@
     - Run npm install mongoose (Now setting up the Database)
     - In the index.js (post) we will be writing logic to add in the database
     - In the (get) of index.js we will be getting all the data by using find which returns promise 
+
+# Till here backend is completed
+# Frontend
+
+    - install react by -:
+        - npm create vite@latest
+        - project name : frontend
+        - React
+        - javascript
+
+    - Now run npm install 
+    - Run npm run dev to check the react app 
+
+    - Create a components folder in the src (In React, a component is a modular, reusable piece of a user interface that encapsulates a piece of functionality or a part of the UI.)
+        - In the components create createTodo.jsx file. In this file we have created the function and exported, it is a modern way to export the function to other files.
